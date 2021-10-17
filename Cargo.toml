@@ -2,7 +2,7 @@
 name = "spolyfy"
 version = "1.0.0"
 edition = "2018"
-authors = ["Taptiive <aalexius912@gmail.com>]
+authors = ["Taptiive <aalexius912@gmail.com>"]
 description = "Spotify module for Polybar"
 readme = "README.md"
 repository = "https://github.com/Taptiive/spolyfy"
