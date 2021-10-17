@@ -142,6 +142,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "dbus"
+version = "0.9.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "de0a745c25b32caa56b82a3950f5fec7893a960f4c10ca3b02060b0c38d8c2ce"
+dependencies = [
+ "libc",
+ "libdbus-sys",
+ "winapi",
+]
+
+[[package]]
 name = "derive_is_enum_variant"
 version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -299,7 +310,7 @@ name = "mpris"
 version = "2.0.0-rc2"
 source = "git+https://github.com/Taptiive/mpris-rs#f0eaa048def7c645c30adae51aa61d134215a804"
 dependencies = [
- "dbus",
+ "dbus 0.8.4",
  "derive_is_enum_variant",
  "enum-kinds",
  "failure",
@@ -419,11 +430,11 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7ef03e0a2b150c7a90d01faf6254c9c48a41e95fb2a8c2ac1c6f0d2b9aefc342"
 
 [[package]]
-name = "spolyfy-rs"
-version = "0.1.0"
+name = "spolyfy"
+version = "1.0.0"
 dependencies = [
  "clap",
- "dbus",
+ "dbus 0.9.5",
  "mpris",
 ]
 

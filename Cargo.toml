@@ -12,6 +12,5 @@ keywords = ["polybar", "spotify"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-mpris = {git="https://github.com/Taptiive/mpris-rs"}
 clap = "3.0.0-beta.4"
-dbus = { version="0.8.1" }
+dbus = "0.9.5"
