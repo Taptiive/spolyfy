@@ -1,0 +1,17 @@
+[package]
+name = "spolyfy"
+version = "1.0.0"
+edition = "2018"
+authors = ["Taptiive <aalexius912@gmail.com>]
+description = "Spotify module for Polybar"
+readme = "README.md"
+repository = "https://github.com/Taptiive/spolyfy"
+license = "MIT OR Apache-2.0"
+keywords = ["polybar", "spotify"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+mpris = {git="https://github.com/Taptiive/mpris-rs"}
+clap = "3.0.0-beta.4"
+dbus = { version="0.8.1" }
