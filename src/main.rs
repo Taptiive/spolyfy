@@ -41,7 +41,7 @@ fn init() -> App<'static>{
             .about("Prints the current song's name and artist")
             .takes_value(true)
     ).arg(
-        Arg::new("live")
+        Arg::new("alive")
             .short('l')
             .long("alive")
             .about("Checks if spotify is running or not")
