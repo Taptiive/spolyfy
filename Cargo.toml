@@ -1,6 +1,6 @@
 [package]
 name = "spolyfy"
-version = "1.0.3"
+version = "1.0.5"
 edition = "2018"
 authors = ["Taptiive <aalexius912@gmail.com>"]
 description = "Spotify module for Polybar"

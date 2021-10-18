@@ -12,24 +12,19 @@ $ cargo install spolyfy
 
 ### **How to use**
 
-These are the modules you need for the polybar config
+You can setup the modules like this
 
 ```ini
 [module/spotify-current]
 type=custom/script
-format = <label>
-label = %output%
-exec = spolyfy -c 35 ;35 is the max number of characters allowed in the title
+exec = spolyfy -c 35
 exec-if = [ $(spolyfy -l) = "yep" ]
-interval = 3
 ```
 
 ```ini
 [module/spotify-previous]
 type=custom/script
-format = <label>
-label = %output%
-exec = echo "玲" ;Previous symbol on Nerd Fonts
+exec = spolyfy -a ;This command prints a Nerd Font icon
 exec-if = [ $(spolyfy -l) = "yep" ]
 click-left = spolyfy -p
 ```
@@ -37,19 +32,15 @@ click-left = spolyfy -p
 ```ini
 [module/spotify-play-pause]
 type=custom/script
-format = <label>
-label = %output%
-click-left = spolyfy -s
-exec = echo " " ;Play and pause symbols on Nerd Fonts
+exec = spolyfy -x ;This command prints a Nerd Font icon
 exec-if = [ $(spolyfy -l) = "yep" ]
+click-left = spolyfy -s
 ```
 
 ```ini
 [module/spotify-next]
 type=custom/script
-format = <label>
-label = %output%
-exec = echo "怜" ;Next symbol on Nerd Fonts
+exec = spolyfy -b ;This command prints a Nerd Font icon
 exec-if = [ $(spolyfy -l) = "yep" ]
 click-left = spolyfy -n
 ```

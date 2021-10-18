@@ -1,7 +1,6 @@
-use dbus::blocking::{Connection as DbusCon, Proxy};
-use std::collections::HashMap;
-use dbus::arg::{RefArg, Variant};
-use dbus::blocking::stdintf::org_freedesktop_dbus::Properties;
+use dbus::ffidisp::{Connection as DbusCon, ConnPath};
+use dbus::arg::PropMap;
+use dbus::ffidisp::stdintf::org_freedesktop_dbus::Properties;
 
 type GenericResult<R> = Result<R, dbus::Error>;
 
@@ -14,9 +13,7 @@ pub(crate) trait SpotifyConn{
     fn title(&self) -> GenericResult<String>;
 }
 
-type PropMap = HashMap<String, Variant<Box<dyn RefArg>>>;
-
-impl<'r> SpotifyConn for Proxy<'r, &'r DbusCon>{
+impl<'r> SpotifyConn for ConnPath<'r, &'r DbusCon>{
     fn play_pause(&self) -> GenericResult<()>{
         self.method_call("org.mpris.MediaPlayer2.Player", "PlayPause", ())
     }
